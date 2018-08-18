@@ -1,0 +1,17 @@
+<%- include ../partials/header.ejs %>
+
+<div class="jumbotron">
+    <h1 class="display-4">Harkirat Singh Grewal</h1>
+    <p class="lead">I am a future Software engineer.</p>
+    <p class="lead">I am very aspired to study Software Engineering at Centennial College.</p>
+    <hr class="my-4">
+    <p class="lead">Some things or channels that I like:</p>
+    <ul>
+      <% for(var count = 0; count < details.length; count++) { %>
+        <li><%= details[count] %></li>
+      <% } %>
+    </ul>
+  </div>
+
+<%- include ../partials/footer.ejs %>
+  

@@ -1,0 +1,61 @@
+<%- include ../partials/header.ejs %>
+<!--CSS-->
+<link rel="stylesheet" href="./Content/about.css">
+
+<div id="caption">
+    <table id="table">
+      <tr>
+        <div id="img">
+          <td>
+            <img id="myImg" src="../Assets/images/myImage.jpeg" alt="Snow" style="width:100%;max-width:300px">
+          </td>
+          <td>
+            <img id="myImg" src="../Assets/images/myImage2.jpeg" alt="Snow" style="width:100%;max-width:300px">
+          </td>
+        </div>
+      </tr>
+    </table>
+  </div>
+  <div class="zoom"></div>
+  <br>
+  <br>
+  <div id="myModal" class="modal">
+
+    <span class="close">&times;</span>
+
+    <img class="modal-content" id="img01">
+
+    <div id="caption"></div>
+  </div>
+  <div id="jumbotron">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+  <!-- Jumbotron -->
+  <div class="jumbotron">
+    <h1 class="display-4">Got to know me more</h1>
+    <p class="lead">Something about myself: </p>
+    <hr class="my-4">
+    <p id="paragraph" class="content"></p>
+    <p class="content">I am very aspired person and very passionate to learn new things. I have been always interested in doing work on my own
+      and love to help others as much as possible.</p>
+    <p class="content">Things I love to do:</p>
+    <ul id="myFavouriteThings">
+    </ul>
+
+
+    <!--Required injection of data from ../Scripts/core/json/paragraph.json-->
+    
+    <ul>
+      <% for(var count = 0; count < paragraphs.length; count++) { %>
+        <li><%= paragraphs[count] %></li>
+      <% } %>
+    </ul>
+
+  </div>
+
+<%- include ../partials/footer.ejs %>
